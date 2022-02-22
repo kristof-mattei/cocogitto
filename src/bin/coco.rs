@@ -63,7 +63,15 @@ fn main() -> Result<()> {
             (None, None, cli.breaking_change)
         };
 
-        cocogitto.conventional_commit(&cli.typ, cli.scope, cli.message, body, footer, breaking)?;
+        cocogitto.conventional_commit(
+            &cli.typ,
+            cli.scope,
+            cli.message,
+            body,
+            footer,
+            breaking,
+            false,
+        )?;
     }
 
     Ok(())
